@@ -1,0 +1,135 @@
+.header-top {
+	background-color: #ffffff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+	height:55px;
+}
+.header-top.stick{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		padding-top: 3px;
+		background: #FFFFFF;
+		animation: fadeInDown .5s infinite;
+		animation-iteration-count: 1;/*执行次数*/
+		z-index:100;
+}
+@keyframes fadeInDown{
+		from{top:-66px};
+		to{top};
+}
+.header-top .logo{
+	display: block;
+	vertical-align: center;
+    line-height: 55px;
+    font-size: 28px;
+    margin-left: 30px;
+    color: #555;
+}
+.header-top .logo img{
+	height:46px;
+}
+ul,
+li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.top-right a{
+	text-decoration: none;
+	color: #555; 
+}
+/* .top-right a:hover,.top-right,.top-right a:after,.top-right a:active,
+.top-right a:link,
+.top-right a:focus {
+	color:#39ADD1;
+}  */
+.top-right a:hover{
+	color:#39ADD1;
+	font-size:14.5px;
+	transition:all .05s;
+}
+.top-right>ul>li {
+	display: inline-block;
+	margin-right: 20px;
+	padding-left: 20px;
+	position: relative;
+}
+
+.top-right>ul>li>a {
+	color: #555;
+	line-height: 55px;
+	text-decoration: none;
+	display: block;
+	outline: none;
+}
+
+.top-right .fa.fa-angle-down {
+	padding-left: 6px;
+}
+
+.top-right .dropdown-links {
+	z-index: 1;
+	display: block;
+	text-align: center;
+	position: absolute;
+	background-color: #FFFFFF;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+	min-width: 120px;
+	overflow: hidden;
+	top: 100%;
+	line-height: 2.5;
+	max-height: 0px;
+	transition: all .5s;
+	right: 0;
+}
+
+.top-right .dropdown-links li:nth-child(n+1):nth-child(-n+1):after {
+	content: '';
+	text-align: center;
+	display: block;
+	border-bottom: 1px solid #39ADD1;
+	width: 50%;
+	position: relative;
+	margin: auto;
+}
+
+.top-right .dropdown-links li:hover a {
+	font-size: 15px;
+	color: #39ADD1;
+}
+
+.top-right .dropdown-links.active {
+	max-height: 150px;
+}
+/**************serach部分**************/
+ .header-top .serach-area{
+	height:48px;
+	position:relative;
+} 
+.header-top .search-area form input[type="text"]{
+	display:inline-block;
+	width:255px;
+	margin-top:3px;
+	height:40px; 
+	background-color:#ffffff;
+	border:none;
+	padding-left:5px;
+	outline: none;
+	border-bottom:1px solid #000000;
+}
+ .header-top .search-area form button{
+	position:absolute;
+    top: 10px;
+    right:100px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 2px 8px;
+    outline:none; 
+} 
+ .header-top .search-area form button:hover{
+    color:#ffffff;
+    background-color:#39ADD1;
+ 
+ }

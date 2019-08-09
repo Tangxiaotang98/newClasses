@@ -1,0 +1,87 @@
+*{
+	margin: 0;padding: 0;
+}
+#search{
+	position: relative;
+	background: url(../img/search.jpg)no-repeat;
+	background-size: 100%;
+	height: 375px;
+}
+#myCarousel{
+	    border: 1px solid #ffffff;
+    margin: 10px 20px;
+    border-radius: 10px;
+}
+.carousel-inner,
+.carousel-inner>inner>.item,
+.carousel-control.left,
+.carousel-control.right{
+	border-radius: 10px;
+}
+.carousel-inner>inner>.item>a>img,
+.carousel-inner>.item>img{
+	width: 100%;
+	height: 330px;
+	border-radius:10px;
+}
+.carousel-control.left .fa.fa-angle-left,
+.carousel-control.right .fa.fa-angle-right{
+	font-size:60px;
+	margin-top:135px;
+}
+.carousel-control.left .fa.fa-angle-left{
+	margin-right:80px;
+}
+.carousel-control.right .fa.fa-angle-right{
+	margin-left:80px;
+}
+#search .center{
+	top:180px;
+	left: 550px;
+	width: 330px;
+	line-height: 50px;
+	position: absolute;
+	text-align: center;
+	background-color: #302727;
+	opacity: .5;
+	border-radius: 8px;
+}
+#search .center input{
+	padding-left: 8px;
+	display: inline-block;
+	width: 250px;
+	height: 40px;
+	outline: none;
+	border-radius: 8px;
+	background: lightgray;
+	font-size: 18px;
+	border: 1px solid lightgray;
+}
+#search .center button{
+	display: inline-block;
+	width: 60px;
+	height: 40px;
+	outline: none;
+	border-radius: 8px;
+	font-size:18px;
+	background: lightgray;
+	border: 1px solid lightgray;
+}
+#tour{
+	text-align: center;
+	padding: 20px 100px 10px 100px;
+}
+#tour .center h2,
+#tour .center p{
+	padding-bottom: 8px;
+}
+#tour .center h2{
+	font-weight: 1000;
+	color: #89979a;
+	letter-spacing: 5px;
+    font-size: 28px;
+}
+#tour .center h2 .fa.fa-skyatlas{
+	padding-right:10px;
+	color:#e59a13;
+}

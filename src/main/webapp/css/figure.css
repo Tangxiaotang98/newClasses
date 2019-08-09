@@ -1,0 +1,76 @@
+@charset "UTF-8";
+a{
+	text-decoration:none;
+	color:#555;
+}
+a:hover{
+	text-decoration:none;
+}
+#tour figure{
+	display: inline-block;
+	height: 265px;
+	/* border: 1px solid lightgray; */
+	border-radius:10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+	width: 305px;
+	padding:5px 2px;
+	position: relative;
+	text-align: center;
+	margin: 20px;
+}
+#tour figure img{
+	padding-top:5px;
+	width: 290px;
+	height:190px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	border-radius:10px;
+    transition:all .2s;
+}
+#tour figure img:hover{
+	transform: scale(1.02); 
+}
+#tour figure figcaption{
+	font-size: 13px;
+	text-align: left;
+}
+#tour figure figcaption h4{
+	padding-left:10px;
+	font-weight:1000;
+	font-size:17px;
+	color:#555;
+	text-decoration:none;
+}
+#tour figure figcaption h4:hover{
+	color:#39ADD1;
+	text-deocoration:none;
+}
+#tour figure figcaption .info{
+	padding-top: 5px;
+}
+#tour figure figcaption .info .sat{
+	position: absolute;
+	font-size: 13px;
+	bottom: 5px;
+	right: 5px;
+}
+#tour figure figcaption .info .price{
+	position: absolute;
+	left: 10px;
+	bottom: 5px;
+	color: #39ADD1;
+	font-size: 16px;
+	font-weight: 700;
+}
+#tour figure figcaption .type{
+	position: absolute;
+    bottom: 75px;
+    left: 10px;
+    background-color: rgba(28, 31, 33, 0.6);
+    padding: 4px 8px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-weight: 200;
+    opacity: .8;
+}

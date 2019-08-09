@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="CoursePackage" namespace="/course"
+		extends="struts-default,json-default">
+		<action name="showAllCourse" class="com.tangyanyan.action.CourseAction" method="showAllCourse">
+		     <result>/admin/courseList.jsp</result>
+		</action>
+		<action name="addCourse" class="com.tangyanyan.action.CourseAction" method="addCourse">
+		    <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+		<action name="getAllSecondCategory" class="com.tangyanyan.action.CourseAction" method="getAllSecondCategory">
+		   <result>/admin/addCourse.jsp</result>
+		</action>
+		<action name="uploadImage" class="com.tangyanyan.action.CourseAction" method="uploadImage">
+		    <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+		<action name="getCourseById" class="com.tangyanyan.action.CourseAction" method="getCourseById">
+		     <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+		<action name="deleteCourse" class="com.tangyanyan.action.CourseAction" method="deleteCourse">
+		     <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+		<action name="toUploadVideo" class="com.tangyanyan.action.CourseAction" method="toUploadVideo">
+		     <result>/admin/uploadVideo.jsp</result>
+		</action>
+		<action name="uploadVideo" class="com.tangyanyan.action.CourseAction" method="uploadVideo">
+		     <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+		<action name="toShowCourse" class="com.tangyanyan.action.CourseAction" method="toShowCourse">
+		     <result>/user/showCourse.jsp</result>
+		</action>
+		<action name="playVideo" class="com.tangyanyan.action.CourseAction" method="playVideo">
+		     <result>/user/playVideo.jsp</result>
+		</action>
+	</package>
+
+</struts>

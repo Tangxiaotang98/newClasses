@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="firstCategoryPackage" namespace="/first"
+		extends="struts-default,json-default">
+		<action name="showAllFirstCategory" class="com.tangyanyan.action.FirstCategoryAction" method="showAllFirstCategory">
+		     <result>/admin/firstList.jsp</result>
+		</action>
+		<action name="addFirstCategory" class="com.tangyanyan.action.FirstCategoryAction" method="addFirstCategory">
+		    <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+		<action name="deleteFirstCategory" class="com.tangyanyan.action.FirstCategoryAction" method="deleteFirstCategory">
+		    <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+		<action name="getFirstCategoryById" class="com.tangyanyan.action.FirstCategoryAction" method="getFirstCategoryById">
+		     <result>/admin/addFirstCategory.jsp</result>
+		</action>
+	</package>
+
+</struts>

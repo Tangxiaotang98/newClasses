@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="userPackage" namespace="/user"
+		extends="struts-default,json-default">
+		<action name="login" class="com.tangyanyan.action.UserAction"
+			method="login">
+			<result name="userSuccess">/user/userIndex.jsp</result>
+			<result name="adminSuccess">/admin/index.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		<action name="register"
+			class="com.tangyanyan.action.UserAction" method="register">
+			<result name="success">/login.jsp</result>
+			<result name="input">/register.jsp</result>
+		</action>
+		<!-- 用户名验证没有生效 -->
+		<action name="checkUname"
+			class="com.tangyanyan.action.UserAction" method="checkUname">
+			<result name="success" type="json">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="checkEmail"
+			class="com.tangyanyan.action.UserAction" method="checkEmail">
+			<result name="success" type="json">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="layout" class="com.tangyanyan.action.UserAction" method="layout">
+		    <result>/login.jsp</result>
+		</action>
+		<action name="toShow" class="com.tangyanyan.action.UserAction" method="toShow">
+		     <result>/user/show.jsp</result>
+		</action>
+		<action name="toPersonalCenter" class="com.tangyanyan.action.UserAction" method="toPersonalCenter">
+		      <result>/user/personalCenter.jsp</result>
+		</action>
+		<!-- 修改密码 -->
+		<action name="changePassword" class="com.tangyanyan.action.UserAction" method="changePassword">
+		    <result name="success" type="json">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<!-- 上传头像 -->
+<action name="changeImage" class="com.tangyanyan.action.UserAction" method="changeImage">
+				    <result name="success" type="json">
+				<param name="root">map</param>
+			</result>
+		</action>
+			<!-- 	<action name="updateSex" class="com.tangyanyan.action.UserAction" method="updateSex">
+			<result name="success" type="json">
+				<param name="root">map</param>
+			</result>
+		</action> -->
+		<!-- 更新用户信息 -->
+		<action name="updateUserInfor" class="com.tangyanyan.action.UserAction" method="updateUserInfor">
+			<result name="success" type="json">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="toAdminPersonalCenter" class="com.tangyanyan.action.UserAction" method="toAdminPersonalCenter">
+		    <result>/admin/selfInfo.jsp</result>
+		</action>
+	</package>
+
+</struts>

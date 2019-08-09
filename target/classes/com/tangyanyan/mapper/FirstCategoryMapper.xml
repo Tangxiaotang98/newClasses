@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tangyanyan.dao.FirstCategoryDao">
+    <insert id="insertFirstCategory" parameterType="FirstCategory">
+        INSERT INTO tb_firstcategory(name,description) VALUES (#{name},#{description})
+    </insert>
+    <delete id="deleteFirstCategoryById" parameterType="Integer">
+        DELETE FROM tb_firstcategory WHERE first_id = #{firstId}
+    </delete>
+    <select id="queryCategory" resultType="FirstCategory" parameterType="FirstCategory" >
+        SELECT * FROM tb_firstcategory WHERE 1=1
+        <if test="name != null" >
+           AND name LIKE '%${name}%'
+        </if>
+    </select>
+    <select id="queryCategoryById" resultType="FirstCategory" parameterType="Integer">
+        SELECT * FROM tb_firstcategory WHERE first_id = #{firstId}
+    </select>
+    <update id="updateFirstCategory" parameterType="FirstCategory">
+         UPDATE  tb_firstcategory SET name = #{name},description= #{description}
+          WHERE first_id = #{firstId}
+    </update>
+</mapper>

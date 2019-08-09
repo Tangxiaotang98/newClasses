@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="secondCategoryPackage" namespace="/second"
+		extends="struts-default,json-default">
+		<action name="showAllSecondCategory" class="com.tangyanyan.action.SecondCategoryAction" method="showAllSecondCategory">
+		     <result>/admin/secondList.jsp</result>
+		</action>
+		<action name="addSecondCategory" class="com.tangyanyan.action.SecondCategoryAction" method="addSecondCategory">
+		    <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+		<action name="getAllFirstCategoryName" class="com.tangyanyan.action.SecondCategoryAction" method="getAllFirstCategoryName">
+		   <result>/admin/addSecondCategory.jsp</result>
+		</action>
+		<action name="uploadImage" class="com.tangyanyan.action.SecondCategoryAction" method="uploadImage">
+		    <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+		<action name="getSecondCategoryById" class="com.tangyanyan.action.SecondCategoryAction" method="getSecondCategoryById">
+		   <result>/admin/addSecondCategory.jsp</result>
+		</action>
+		<action name="deleteSecondById" class="com.tangyanyan.action.SecondCategoryAction" method="deleteSecondById">
+		    <result type="json">
+		       <param name="root">map</param>
+		    </result>
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tangyanyan.dao.SecondCategoryDao">
+    <insert id="insertSecondCategory" parameterType="SecondCategory">
+       INSERT INTO tb_secondCategory 
+       (course_name,img_url,course_type,first_id,teacher_name,user_id,course_url,description,status) 
+       VALUES 
+       (#{courseName},#{imgUrl},#{courseType},#{firstId},#{teacherName},#{userId},#{courseUrl},#{description},#{status})
+   </insert>
+     <!--显示所有自己创建的课程-->
+     <select id="queryCategory" resultType="SecondCategory" parameterType="SecondCategory">
+         SELECT * FROM  tb_secondcategory WHERE 1=1
+         <if test="firstId > 0">
+           AND first_id = #{firstId}
+         </if> 
+         <if test="userId > 0">
+           AND user_id = #{userId}
+         </if>
+         <if test="courseName != null">
+           AND course_name LIKE '%${courseName}%'
+         </if>
+     </select>
+     <select id="getSecondCategroyBySecondId" parameterType="Integer" resultType="SecondCategory">
+        SELECT * FROM tb_secondcategory WHERE second_id = #{secondId}
+     </select>
+     <delete id="deleteSecondById" parameterType="Integer">
+        DELETE FROM tb_secondcategory WHERE second_id = #{secondId}
+     </delete>
+     <update id="updateSecondCategory" parameterType="SecondCategory">
+         UPDATE  tb_secondCategory SET course_name = #{courseName},img_url= #{imgUrl},course_type=#{courseType},
+         first_id = #{firstId},teacher_name=#{teacherName},course_url=#{courseUrl},description=#{description},status=#{status}
+          WHERE second_id = #{secondId}
+     </update>
+     <select id="queryKeyByContent" resultType="Key">
+          SELECT * FROM tb_key WHERE content = #{content}
+     </select>
+     <insert id="insertKey" parameterType="Key">
+        INSERT INTO tb_key (content,time) VALUES (#{content},#{time})
+     </insert>
+     <update id="updateKeyByKeyId" parameterType="Integer">
+         UPDATE  tb_key SET time = time+1 WHERE id = #{id}
+     </update>
+     <select id="getTopKey" resultType="Key">
+         SELECT  * from tb_key  order by time desc limit 8
+      <!--    select * from user limit1 order by id desc -->
+     </select>
+</mapper>

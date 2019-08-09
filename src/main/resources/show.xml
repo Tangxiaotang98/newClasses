@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="showPackage" namespace="/show"
+		extends="struts-default,json-default">
+		<action name="getAllSecondCategoryByFirstId"
+			class="com.tangyanyan.action.ShowAction" method="getAllSecondCategoryByFirstId">
+			<result name="success" type="json">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="toShow" class="com.tangyanyan.action.ShowAction" method="toShow">
+		     <result>/user/new.jsp</result>
+		</action>
+		<action name="toIndex" class="com.tangyanyan.action.ShowAction" method="toIndex">
+		     <result>/user/userIndex.jsp</result>
+		</action>
+		<action name="toSearch" class="com.tangyanyan.action.ShowAction" method="toSearch">
+		     <result>/user/search.jsp</result>
+		</action>
+		<!-- <action name="search"
+			class="com.tangyanyan.action.ShowAction" method="search">
+			<result name="success" type="json">
+				<param name="root">map</param>
+			</result>
+		</action> -->
+	</package>
+
+</struts>

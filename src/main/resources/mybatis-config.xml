@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- mybatis配置文件有配置顺序
+ "(properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,reflectorFactory?,plugins?,environments?,databaseIdProvider?,mappers?)". -->
+    <!-- 配置别名 -->
+    <settings>
+        <!-- 自动映射为驼峰命名 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+	 	<setting name="logImpl" value="STDOUT_LOGGING" />  
+	</settings>
+	<typeAliases>
+       <package name="com.tangyanyan.model"/>
+    </typeAliases>
+	<!-- 配置映射文件Mapper的位置 -->
+	<mappers>
+	   <mapper resource="com/tangyanyan/mapper/UserMapper.xml"/>
+	   <mapper resource="com/tangyanyan/mapper/FirstCategoryMapper.xml"/>
+	   <mapper resource="com/tangyanyan/mapper/SecondCategoryMapper.xml"/>
+	   <mapper resource="com/tangyanyan/mapper/CourseMapper.xml"/>
+	</mappers>
+</configuration>

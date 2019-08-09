@@ -1,0 +1,171 @@
+div#container {
+    top: 0px;
+    padding: 35px 50px;
+	margin: 20px 50px;
+    max-width: 100%;
+	border-radius:8px ;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .2);;
+}
+a{
+	text-decoration:none;
+}
+@media screen and (min-width: 1023px)
+.grid-100 {
+    clear: both;
+    width: 100%;
+}
+.hero{
+	background-color: #39ADD1;
+	border-radius: 5px;
+}
+.hero .hero-meta {
+    padding: 20px 15px 30px;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+	position: relative;
+}
+.hero .hero-meta img{
+	position: absolute;
+	top: 10px;
+	right: 0px;
+}
+.hero .hero-meta h1,p{
+	color: #FFFFFF;
+}
+.grid-parent{
+	background-color: #000000;
+	 padding-left: 0;
+	padding-right: 0;
+}
+.grid-container .hero .hero-meta h3 a{
+	color: #777;
+	text-decoration:none;
+}
+.hero ul.tags li a:hover, .hero ul.tags li span:hover {
+    color: #fff;
+    border-color: #fff;
+}
+.hero ul.tags span{
+	margin-top: 20px;
+	display: inline-block;
+	width: 70px;
+	line-height: 40px;
+	font-weight: 500;
+	border: 2px solid #ece5e5;
+	text-align: center;
+	border-radius: 30px;
+	background: transparent;
+	color:#ece5e5;
+}
+.contained {
+    background: #fff;
+    padding: 30px 15px;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.1);
+}
+.achievement-meta, .upcoming-meta, .current-project {
+    padding-left: 80px;
+    display: block;
+}
+.achievement-meta>img, .upcoming-meta>img, .current-project>img {
+    float: left;
+    width: 60px;
+    margin: -5px 0 0 -80px;
+}
+.achievement-meta span{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.button-primary{
+	display: inline-block;
+    background-color: #39ADD1;
+    border-color: #39ADD1;
+}
+button.large, button.button-large, .button.large, .button.button-large {
+	display: inline-block;
+	border-radius: 5px;
+    font-size: 16px;
+    height: 50px;
+    line-height: 46px;
+    padding: 0 22px;
+} 
+.mobile-action a{
+	color: #FFFFFF;
+}
+.achievement-meta .learn_sum {
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 100px;
+}
+.achievement-steps {
+    background: #f9fafa;
+    margin: 30px -30px -30px;
+    padding: 0 0 10px;
+    border-top: 1px solid #e8ebed;
+    border-radius: 0 0 5px 5px;
+}
+a {
+    text-decoration: none;
+    color: #777;
+}
+ol, ul {
+    list-style: none;
+}
+.achievement-steps li {
+    list-style-type: none;
+}
+.achievement-steps li>a {
+    display: block;
+    padding: 20px 30px 20px 50px;
+    border-bottom: 1px solid #edeff0;
+    overflow: hidden;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    text-decoration:none;
+}
+.achievement-steps li>a .icon {
+    float: left;
+    margin: -7px 0 -7px -65px;
+}
+.fa.fa-play-circle {
+    background-position: 0 0;
+	font-size: 30px;
+	margin-right: 50px;
+}
+ .achievement-steps ul li a p{
+	float: right;
+	 display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+	color: #65656b;
+}
+strong{
+	    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.try_watch {
+    background: #39ADD1;
+    color: #fff;
+    padding: 3px;
+    display: inline-block;
+}
+.teacherName{
+	position: absolute;
+    left: 130px;
+    top: 195px;
+    font-size: 20px;
+    color: #fff;
+}

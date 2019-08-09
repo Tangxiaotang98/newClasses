@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tangyanyan.dao.UserDao">
+    <insert id="register" parameterType="User" useGeneratedKeys="true" keyProperty="userId">
+        INSERT INTO tb_user(user_name,mail,password,privilege) VALUES (#{userName},#{mail},#{password},#{privilege})
+    </insert>
+    <select id="checkUname" resultType="User" parameterType="String">
+        SELECT * FROM tb_user WHERE user_name = #{userName}
+    </select>
+    <select id="checkMail" resultType="User" parameterType="String">
+        SELECT * FROM tb_user WHERE mail = #{mail}
+    </select>
+    <select id="login" resultType="User" parameterType="User">
+        SELECT * FROM tb_user WHERE 1=1
+        <if test="userName != null">
+           AND user_name = #{userName}
+        </if>
+         <if test="mail != null">
+           AND mail = #{mail}
+        </if>
+        AND password = #{password}
+    </select>
+    <select id="getUserById" parameterType="Integer" resultType="User">
+         SELECT * FROM tb_user WHERE user_id = #{userId}
+    </select>
+    <insert id="insertUserInfor" parameterType="UserInfor">
+        INSERT INTO tb_userinfo (user_id) VALUES (#{userId})
+    </insert>
+    <select id="getUserInforByUserId" parameterType="Integer" resultType="UserInfor">
+         SELECT * FROM tb_userinfo WHERE user_id = #{userId}
+    </select>
+    <update id="changePasswordByUserId">
+        UPDATE tb_user SET password = #{newPassword} WHERE user_id = #{userId}
+    </update>
+   <!--  <update id="changeImageByUserId" parameterType="UserInfor">
+        UPDATE tb_userinfo SET img_url = #{imgUrl} WHERE user_id = #{userId}
+    </update>
+     <update id="updateSexByUserId" parameterType="UserInfor">
+        UPDATE tb_userinfo SET sex = #{sex} WHERE user_id = #{userId}
+    </update> -->
+    <update id="updateUserInforByUserId" parameterType="UserInfor">
+        UPDATE tb_userinfo
+        <!-- set能够智能去掉后面的逗号 -->
+        <set>
+           <if test="sex != null">
+            sex = #{sex},
+          </if>
+          <if test="imgUrl != null">
+            img_url = #{imgUrl},
+          </if>
+          <if test="signature != null">
+             signature = #{signature},
+          </if>
+          <if test="address != null">
+             address = #{address}
+          </if>
+        </set>
+       WHERE user_id = #{userId}
+    </update>
+</mapper>

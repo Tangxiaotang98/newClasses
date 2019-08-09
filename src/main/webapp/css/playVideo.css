@@ -1,0 +1,21 @@
+.play-center{
+	width: 55%;
+    margin-left: 23%;
+}
+.play-center .courseListLink{
+	padding: 10px 20px;
+	background-color: #39ADD1;
+	border-radius:5px 5px 0px 0px;
+	margin-bottom: 0px;
+}
+.play-center .courseListLink a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.play-center .video-area{
+	width: 100%;
+}
+.play-center .video-area video{
+	width:100%;
+	height:400px;
+}
